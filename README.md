@@ -54,6 +54,8 @@ task codeCoverageReport(type: JacocoReport) {
         html.enabled false
         csv.enabled false
     }
+	
+	onlyIf = { true }
 }
 
 codeCoverageReport.dependsOn {
