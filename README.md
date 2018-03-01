@@ -1,5 +1,4 @@
-[Codecov][1] Gradle Example
-===========================
+# [Codecov][1] Gradle Example
 
 1. Add Jacoco Plugin to your `build.gradle`. [See here](https://github.com/codecov/example-gradle/blob/master/build.gradle#L5)
 1. Set Jacoco to export xml. [See here](https://github.com/codecov/example-gradle/blob/master/build.gradle#L18-L23)
@@ -9,12 +8,12 @@
   - Public project? Using TravisCI, CircleCI or AppVeyor? You're all set! No upload token required.
   - Otherwise please include your repository upload token. [See here](http://docs.codecov.io/v4.3.0/docs/about-the-codecov-bash-uploader#section-upload-token)
 
-
 ## Frequently Asked Questions
 
-####❔ Do you support Multi-module projects?
+#### ❔ Do you support Multi-module projects?
 
 Update your parent (root) `build.gradle`:
+
 ```groovy
 allprojects {
     apply plugin: 'java'
@@ -62,6 +61,7 @@ codeCoverageReport.dependsOn {
 ```
 
 Update your `.travis.yml` file:
+
 ```yml
 language: java
 jdk:
@@ -78,6 +78,5 @@ after_success:
 No need to have anything else report-related in child modules 
 
 [Credits for multi-module](https://csiebler.github.io/blog/2014/02/09/multi-project-code-coverage-using-gradle-and-jacoco/)
-
 
 [1]: https://codecov.io/
